@@ -13,7 +13,7 @@ def get_input_data(test = False) -> list[str]:
     return data
 
 if __name__ == "__main__":
-    data = get_input_data(test=False)
+    data = get_input_data(test=True)
     result_part1 = solve_part1(data)
     print(f"Part 1: {result_part1}")
     result_part2 = solve_part2(data)
