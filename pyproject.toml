@@ -14,4 +14,4 @@ build-backend = "setuptools.build_meta"
 where = ["src"]
 
 [project.scripts]
-at = "advent_tools.cli:main"
+advent = "advent_tools.cli:main"
