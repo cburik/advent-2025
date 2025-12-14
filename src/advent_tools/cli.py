@@ -22,8 +22,13 @@ def create_files(year:int, day:int):
 
     data_file.parent.mkdir(parents=True, exist_ok=True)
     if not solution_file.exists():
+        if TEMPLATE_PATH.exists():
+            with open(TEMPLATE_PATH) as template_f:
+                template_content = template_f.read()
+        else:
+            template_content = "# Write your solution here\n"
         with open(solution_file, "w") as f:
-            f.write("# Write your solution here\n")
+            f.write(template_content)
     if not test_data_file.exists():
         with open(test_data_file, "w") as f:
             f.write("")
