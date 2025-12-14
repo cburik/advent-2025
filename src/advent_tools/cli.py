@@ -3,7 +3,7 @@ from pathlib import Path
 from subprocess import Popen
 
 BASE_DIR = Path(__file__).resolve().parents[1] / "solutions"
-TEMPLATE_PATH = Path(__file__).parent / "templates" / "solution_template.py"
+TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "templates" / "solution_template.py"
 
 def parse_args() -> Namespace:
     arg_parser = ArgumentParser()
